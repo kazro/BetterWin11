@@ -27,7 +27,7 @@ $Bloatware = @(
     "*Viber*", "*ACGMediaPlayer*", "*Netflix*", "*OneCalendar*",
     "*LinkedInforWindows*", "*HiddenCityMysteryofShadows*", "*Hulu*",
     "*HiddenCity*", "*AdobePhotoshopExpress*", "*HotspotShieldFreeVPN*",
-    "*Microsoft.Advertising.Xaml*", "MicrosoftTeams*", "Microsoft.OneDriveSync",
+    "*Microsoft.Advertising.Xaml*", "MicrosoftTeams*",
     "Microsoft.Todos", "Microsoft.549981C3F5F10_8wekyb3d8bbwe"
 )
 
@@ -51,14 +51,14 @@ $services = @(
 # ---------------------------------------------------------------------
 
 Enable-ComputerRestore -Drive "C:\"
-Checkpoint-Computer -Description "setupWin11 Script" -RestorePointType "MODIFY_SETTINGS"
+Checkpoint-Computer -Description "Removed bloatware" -RestorePointType "MODIFY_SETTINGS"
 
 # ---------------------------------------------------------------------
 # O&O Shutup 10
 # ---------------------------------------------------------------------
 
 Start-BitsTransfer "https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe"
-Start-BitsTransfer "https://raw.githubusercontent.com/fedoz13/win11SetupScript/main/shutup10conf.cfg"
+Start-BitsTransfer "https://raw.githubusercontent.com/kazro/BetterWin11/main/shutup10conf.cfg"
 Start-Process -FilePath "./OOSU10.exe" -ArgumentList 'shutup10conf.cfg /quiet' -Wait
 Remove-Item -Path ".\OOSU10.exe" -Force
 Remove-Item -Path ".\shutup10conf.cfg" -Force
