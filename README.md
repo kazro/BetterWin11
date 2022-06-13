@@ -8,11 +8,11 @@ Reverts Windows 11 design flaws, debloats, disables telemetry and adds useful tw
 Run from Windows Powershell (Administrator) with one of the following commands:
 - <ins>Script Version:</ins>
 ```
-iwr -useb https://raw.githubusercontent.com/fedoz13/win11SetupScript/main/setupWin11.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/kazro/BetterWin11/main/setupWin11.ps1 | iex
 ```
 - <ins>GUI Version (Experimental):</ins>
 ```
-iwr -useb https://raw.githubusercontent.com/fedoz13/win11SetupScript/main/setupWin11GUI.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/kazro/BetterWin11/main/setupWin11GUI.ps1 | iex
 ```
 
 ### :wrench: Download and Run Script
