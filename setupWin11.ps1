@@ -1,8 +1,12 @@
 #$ErrorActionPreference = "Stop"
 $ErrorActionPreference = 'SilentlyContinue'
 
+Get-WindowsUpdate
+Install-WindowsUpdate -AcceptAll
+control update
+
 echo "Better Windows11 by kaz!"
-Write-Warning "Have you installed all Windows11 Updates before running this?!" -WarningAction Inquire
+Write-Warning "Make sure all Windows 11 Updates are installed before running this?!" -WarningAction Inquire
 
 # ---------------------------------------------------------------------
 # Data
