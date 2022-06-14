@@ -1,4 +1,4 @@
-# win11SetupScript
+# Better Windows11
 
 Reverts Windows 11 design flaws, debloats, disables telemetry and adds useful tweaks
 
