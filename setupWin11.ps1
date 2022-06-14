@@ -1,6 +1,13 @@
 #$ErrorActionPreference = "Stop"
 $ErrorActionPreference = 'SilentlyContinue'
 
+echo "Did you install all available Windows 11 updates?"
+select yn in "Yes" "No"; do
+  case $yn in
+    Yes ) make install;;
+    No ) exit;;
+  esac
+done
 
 # ---------------------------------------------------------------------
 # Data
@@ -298,6 +305,8 @@ Set-ItemProperty -Path "HKCU:\Console\%%Startup" -Name "DelegationTerminal" -Typ
 Remove-Item -Path ".\Microsoft.VCLibs*.appx" -Force
 Remove-Item -Path ".\Microsoft.DesktopAppInstaller_*.msixbundle" -Force
 
+echo "Your Windows 11 is now Better, ENJOY! Greetings from kaz."
+cmd /c pause
 
 # End of Script - Restart PC
 Start-Sleep 5
