@@ -1,12 +1,13 @@
 #$ErrorActionPreference = "Stop"
 $ErrorActionPreference = 'SilentlyContinue'
 
-echo "Did you install all available Windows 11 updates?"
-select yn in "Yes" "No"; do
-  case $yn in
-    Yes ) make install;;
-    No ) exit;;
-  esac
+while true; do
+    read -p "Did you install all available Windows 11 updates?" yn
+    case $yn in
+        [Yy]* ) make install; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
 done
 
 # ---------------------------------------------------------------------
