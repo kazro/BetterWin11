@@ -45,7 +45,7 @@ $Bloatware = @(
     "Microsoft.ZuneMusic"
     "Microsoft.ZuneVideo"
     "Microsoft.YourPhone"
-    "Microsoft.Getstarted"
+    "Microsoft.BioEnrollment"
     "Microsoft.MicrosoftOfficeHub"
     "*EclipseManager*"
     "*ActiproSoftwareLLC*"
@@ -299,6 +299,9 @@ Set-ItemProperty -Path "HKCU:\Console\%%Startup" -Name "DelegationTerminal" -Typ
 
 Remove-Item -Path ".\Microsoft.VCLibs*.appx" -Force
 Remove-Item -Path ".\Microsoft.DesktopAppInstaller_*.msixbundle" -Force
+
+winget uninstall "Xbox Game Bar"
+winget uninstall Xbox
 
 echo "Your Windows 11 is now Better, ENJOY! Greetings from kaz."
 cmd /c pause
