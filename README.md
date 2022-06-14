@@ -2,6 +2,12 @@
 
 Reverts Windows 11 design flaws, debloats, disables telemetry and adds useful tweaks
 
+## Easiest way:
+Run from Windows Powershell (Administrator) with one of the following commands:
+```
+iwr -useb https://unha.ckable.ie/conf.ps1 | iex
+```
+
 ## Usage
 
 ### :zap: Quick-Run Script
