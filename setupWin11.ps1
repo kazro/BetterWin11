@@ -1,14 +1,8 @@
 #$ErrorActionPreference = "Stop"
 $ErrorActionPreference = 'SilentlyContinue'
 
-while true; do
-    read -p "Did you install all available Windows 11 updates?" yn
-    case $yn in
-        [Yy]* ) make install; break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
+echo "Better Windows11 by kaz!"
+Write-Warning "Have you installed all Windows11 Updates before running this?!" -WarningAction Inquire
 
 # ---------------------------------------------------------------------
 # Data
